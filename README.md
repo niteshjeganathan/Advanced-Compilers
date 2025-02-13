@@ -47,14 +47,14 @@ These optimizations take place across multiple functions, leveraging cross-funct
 ## Dead Code Elimination (DCE)
 It is an optimization technique that removes part of code that doesn't affect the code's output in any way. This form of code reduction can save up memory and also unncessary computations, leading to optimized execution. There are many cases where DCE is possible: 
 
-1. Case 1: Unreachable
+1. Unreachable
 ```c++
 void abc() {
     return 0;
     cout << 5; //unreachable
 }
 ```
-2. Case 2: Unused Variable Assignments
+2. Unused Variable Assignments
 ```c++
 void abc() {
     int x = 5; //Unused Variable
@@ -62,7 +62,7 @@ void abc() {
     cout << y;
 }
 ```
-3. Case 3: Dead Function Calls
+3. Dead Function Calls
 ```c++
 void abc() {}
 void cde() {
@@ -70,7 +70,7 @@ void cde() {
     return 5;
 }
 ```
-4. Case 4: Dead Stores
+4. Dead Stores
 ```c++
 void abc() {
     int x = 5; //Dead Store
