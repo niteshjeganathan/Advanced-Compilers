@@ -51,7 +51,7 @@ It is an optimization technique that removes part of code that doesn't affect th
 ```c++
 void abc() {
     return 0;
-    cout << 5; //unreachable
+    cout << 5; //Unreachable
 }
 ```
 2. Unused Variable Assignments
@@ -77,3 +77,7 @@ void abc() {
     x = 20;
     cout << x;
 ```
+
+## Local Value Numbering (LVN)
+It is an optimization technique that assigns unique numbers to different constants/expressions present in the program. This way if any redundant computations are present, it will automatically remove all those duplicate computations by replacing the existing computation. It operates on a single basic block and doesn't track expressions across multiple blocks. 
+It directly performs the simple Common Subexpression Elimination (CSE). 
