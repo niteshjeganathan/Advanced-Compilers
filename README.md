@@ -81,3 +81,8 @@ void abc() {
 ## Local Value Numbering (LVN)
 It is an optimization technique that assigns unique numbers to different constants/expressions present in the program. This way if any redundant computations are present, it will automatically remove all those duplicate computations by replacing the existing computation. It operates on a single basic block and doesn't track expressions across multiple blocks. 
 It directly performs the simple Common Subexpression Elimination (CSE). 
+
+## Static Single Assignment 
+It is a form of Intermediate Representation (IR) used in compiler optimization where each variable is only assigned once. This transformation simplifies dataflow analysis, enabling more effective optimizations. Phi functions are used at control-flow joint points to merge in different possible values of a variable. But SSA needs to be transformed back for final machine code generation. 
+
+
